@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url';
 import babelParser from '@babel/eslint-parser';
 
 // Resolve __dirname and __filename in ES modules
-
 const __filename = fileURLToPath(import.meta.url); // eslint-disable-line no-underscore-dangle
 const __dirname = path.dirname(__filename); // eslint-disable-line no-underscore-dangle
 
@@ -26,5 +25,5 @@ export default [{
   },
 },
 js.configs.recommended,
-...compat.extends('airbnb'),
+...compat.extends('airbnb-base'),
 ];
