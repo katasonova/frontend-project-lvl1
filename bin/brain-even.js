@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import brainEvenGame from "../src/brainEven.js";
+// eslint-disable-next-line import/extensions
+import brainEvenGame from '../src/brainEven.js';
 
-brainEvenGame()
+brainEvenGame();
