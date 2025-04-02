@@ -1,32 +1,53 @@
 #!/usr/bin/env node
-// eslint-disable-next-line import/extensions
-import { brainGamesGreetings, getRandomNumber, MAX_ROUNDS } from '../index.js';
+import {
+  brainGamesGreetings, getRandomNumber, MAX_ROUNDS, getUserInput, compareResults,
+  logCongratulations,
+  // eslint-disable-next-line import/extensions
+} from '../index.js';
 
-export default function calcGame() {
+const OPERATORS = ['+', '-', '*'];
+
+const calculate = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return 'Error: Unrecognised operator';
+  }
+};
+
+const calcGame = () => {
   const userName = brainGamesGreetings();
+  let winScore = 0;
 
   console.log('What is the result of the expression?'); // eslint-disable-line no-console
 
   while (winScore < MAX_ROUNDS) {
     const randomNumber1 = getRandomNumber();
     const randomNumber2 = getRandomNumber();
-    
-    console.log(`Question: ${randomNumber1 }`); // eslint-disable-line no-console
+    const operator = OPERATORS[getRandomNumber(0, 2)];
 
-//     getUserInput();
-//     const calculatedResult = isEven(randomNumber);
+    console.log(`Question: ${randomNumber1} ${operator} ${randomNumber2}`); // eslint-disable-line no-console
 
-//     if (userInput.toString() === calculatedResult.toString()) {
-//       console.log('Correct!'); // eslint-disable-line no-console
-//       winScore += 1;
-//     } else {
-//       console.log(`"${userInput.toString()}" is wrong answer ;(. Correct answer was "${calculatedResult.toString()}".`); // eslint-disable-line no-console
-//       console.log(`Let's try again, ${userName}!`); // eslint-disable-line no-console
-//       return;
-//     }
+    const userInput = getUserInput();
+    const calculatedResult = calculate(randomNumber1, randomNumber2, operator);
+
+    const finalResult = compareResults(Number(userInput), calculatedResult, userName);
+
+    if (finalResult) {
+      winScore += 1;
+    } else {
+      return;
+    }
   }
 
-//   if (winScore === 3) {
-//     console.log(`Congratulations, ${userName}!`); // eslint-disable-line no-console
-//   }
-}
+  if (winScore === MAX_ROUNDS) {
+    logCongratulations(userName);
+  }
+};
+
+export default calcGame;

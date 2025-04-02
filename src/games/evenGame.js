@@ -5,6 +5,8 @@ import {
   MAX_ROUNDS,
   getRandomNumber,
   getUserInput,
+  compareResults,
+  logCongratulations,
   // eslint-disable-next-line import/extensions
 } from '../index.js';
 
@@ -18,7 +20,7 @@ const isEven = (number) => {
   return 'no';
 };
 
-export default function isEvenGame() {
+const isEvenGame = () => {
   const userName = brainGamesGreetings();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".'); // eslint-disable-line no-console
@@ -30,17 +32,18 @@ export default function isEvenGame() {
     const userInput = getUserInput();
     const calculatedResult = isEven(randomNumber);
 
-    if (userInput.toString() === calculatedResult.toString()) {
-      console.log('Correct!'); // eslint-disable-line no-console
+    const finalResult = compareResults(userInput, calculatedResult, userName);
+
+    if (finalResult) {
       winScore += 1;
     } else {
-      console.log(`"${userInput.toString()}" is wrong answer ;(. Correct answer was "${calculatedResult.toString()}".`); // eslint-disable-line no-console
-      console.log(`Let's try again, ${userName}!`); // eslint-disable-line no-console
       return;
     }
   }
 
   if (winScore === MAX_ROUNDS) {
-    console.log(`Congratulations, ${userName}!`); // eslint-disable-line no-console
+    logCongratulations(userName);
   }
-}
+};
+
+export default isEvenGame;
