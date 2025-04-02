@@ -1,23 +1,15 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-// eslint-disable-next-line import/extensions
-import brainGamesGreetings from './cli.js';
 
-const WIN_SCORE = 3;
+import {
+  brainGamesGreetings,
+  MAX_ROUNDS,
+  getRandomNumber,
+  getUserInput,
+  // eslint-disable-next-line import/extensions
+} from '../index.js';
+
 const EVEN_DIVISOR = 2;
-let userInput;
 let winScore = 0;
-
-const getRandomNumber = () => {
-  const MIN = 1;
-  const MAX = 100;
-
-  return Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
-};
-
-const getUserInput = () => {
-  userInput = readlineSync.question('Your answer: ');
-};
 
 const isEven = (number) => {
   if (number % EVEN_DIVISOR === 0) {
@@ -26,16 +18,16 @@ const isEven = (number) => {
   return 'no';
 };
 
-export default function brainEvenGame() {
+export default function isEvenGame() {
   const userName = brainGamesGreetings();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".'); // eslint-disable-line no-console
 
-  while (winScore < WIN_SCORE) {
+  while (winScore < MAX_ROUNDS) {
     const randomNumber = getRandomNumber();
     console.log(`Question: ${randomNumber}`); // eslint-disable-line no-console
 
-    getUserInput();
+    const userInput = getUserInput();
     const calculatedResult = isEven(randomNumber);
 
     if (userInput.toString() === calculatedResult.toString()) {
@@ -48,7 +40,7 @@ export default function brainEvenGame() {
     }
   }
 
-  if (winScore === 3) {
+  if (winScore === MAX_ROUNDS) {
     console.log(`Congratulations, ${userName}!`); // eslint-disable-line no-console
   }
 }
