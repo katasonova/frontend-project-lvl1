@@ -2,6 +2,8 @@ import readlineSync from 'readline-sync';
 
 // Max count of rounds in any one game
 export const MAX_ROUNDS = 3;
+export const MAX_NUMBER = 100;
+export const MIN_NUMBER = 1;
 
 export const brainGamesGreetings = () => {
   console.log('Welcome to the Brain Games!'); // eslint-disable-line no-console
@@ -14,7 +16,7 @@ export const brainGamesGreetings = () => {
 
 export const getUserInput = () => readlineSync.question('Your answer: ');
 
-export const getRandomNumber = (min = 1, max = 100) => Math.floor(
+export const getRandomNumber = (min = MIN_NUMBER, max = MAX_NUMBER) => Math.floor(
   Math.random() * (max - min + 1) + min,
 );
 

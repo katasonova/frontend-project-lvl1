@@ -29,7 +29,7 @@ const calcGame = () => {
   while (winScore < MAX_ROUNDS) {
     const randomNumber1 = getRandomNumber();
     const randomNumber2 = getRandomNumber();
-    const operator = OPERATORS[getRandomNumber(0, 2)];
+    const operator = OPERATORS[getRandomNumber(0, OPERATORS.length)];
 
     console.log(`Question: ${randomNumber1} ${operator} ${randomNumber2}`); // eslint-disable-line no-console
 

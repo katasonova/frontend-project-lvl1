@@ -7,3 +7,6 @@ Asciinema of the "Brain Even" game:
 
 Asciinema of the "Brain Calc" game:
 [![asciicast](https://asciinema.org/a/dhNaGZ30pGy9SLarNAkvtmJDt.svg)](https://asciinema.org/a/dhNaGZ30pGy9SLarNAkvtmJDt)
+
+Asciinema of the "Brain GCD" (Greatest Common Divisor) game:
+[![asciicast](https://asciinema.org/a/tY2ydfIhDSxSfkFWw4RqNBvly.svg)](https://asciinema.org/a/tY2ydfIhDSxSfkFWw4RqNBvly)
