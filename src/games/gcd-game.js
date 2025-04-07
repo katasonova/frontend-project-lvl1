@@ -1,6 +1,14 @@
+#!/usr/bin/env node
+
 import {
-  brainGamesGreetings, MAX_ROUNDS, getRandomNumber, getUserInput, compareResults,
-  logCongratulations, MAX_NUMBER, MIN_NUMBER,
+  brainGamesGreetings,
+  MAX_ROUNDS,
+  getRandomNumber,
+  getUserInput,
+  compareResults,
+  logCongratulations,
+  MAX_NUMBER,
+  MIN_NUMBER,
   // eslint-disable-next-line import/extensions
 } from '../index.js';
 

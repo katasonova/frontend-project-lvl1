@@ -10,3 +10,6 @@ Asciinema of the "Brain Calc" game:
 
 Asciinema of the "Brain GCD" (Greatest Common Divisor) game:
 [![asciicast](https://asciinema.org/a/tY2ydfIhDSxSfkFWw4RqNBvly.svg)](https://asciinema.org/a/tY2ydfIhDSxSfkFWw4RqNBvly)
+
+Asciinema of the "Brain Progression" game:
+[![asciicast](https://asciinema.org/a/dwdJBGZAsMaiRmiA3LJP6QYRc.svg)](https://asciinema.org/a/dwdJBGZAsMaiRmiA3LJP6QYRc)

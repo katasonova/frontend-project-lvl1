@@ -1,6 +1,11 @@
 #!/usr/bin/env node
+
 import {
-  brainGamesGreetings, getRandomNumber, MAX_ROUNDS, getUserInput, compareResults,
+  brainGamesGreetings,
+  getRandomNumber,
+  MAX_ROUNDS,
+  getUserInput,
+  compareResults,
   logCongratulations,
   // eslint-disable-next-line import/extensions
 } from '../index.js';
@@ -29,7 +34,7 @@ const calcGame = () => {
   while (winScore < MAX_ROUNDS) {
     const randomNumber1 = getRandomNumber();
     const randomNumber2 = getRandomNumber();
-    const operator = OPERATORS[getRandomNumber(0, OPERATORS.length)];
+    const operator = OPERATORS[getRandomNumber(0, OPERATORS.length - 1)];
 
     console.log(`Question: ${randomNumber1} ${operator} ${randomNumber2}`); // eslint-disable-line no-console
 
