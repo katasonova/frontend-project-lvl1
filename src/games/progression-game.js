@@ -33,7 +33,7 @@ const generateProgression = () => {
 
   const generateHiddenNumberPosition = getRandomNumber(0, result.length - 1);
   const hiddenNumber = result[generateHiddenNumberPosition];
-  result[generateHiddenNumberPosition] = '..\u200B';
+  result[generateHiddenNumberPosition] = ' .. ';
 
   console.log(`Question: ${result.join(' ')}`); // eslint-disable-line no-console
   return hiddenNumber;
