@@ -13,3 +13,6 @@ Asciinema of the "Brain GCD" (Greatest Common Divisor) game:
 
 Asciinema of the "Brain Progression" game:
 [![asciicast](https://asciinema.org/a/dwdJBGZAsMaiRmiA3LJP6QYRc.svg)](https://asciinema.org/a/dwdJBGZAsMaiRmiA3LJP6QYRc)
+
+Asciinema of the "Brain Prime" game:
+[![asciicast](https://asciinema.org/a/1LNJPh9CckIyI4u29A4I3pT1Q.svg)](https://asciinema.org/a/1LNJPh9CckIyI4u29A4I3pT1Q)

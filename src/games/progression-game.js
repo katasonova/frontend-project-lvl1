@@ -57,10 +57,10 @@ const progressionGame = () => {
     } else {
       return;
     }
+  }
 
-    if (winScore === MAX_ROUNDS) {
-      logCongratulations(userName);
-    }
+  if (winScore === MAX_ROUNDS) {
+    logCongratulations(userName);
   }
 };
 
