@@ -10,7 +10,7 @@ export const brainGamesGreetings = () => {
 
   // Wait for user's response.
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${userName}!`); // eslint-disable-line no-console
+  console.log(`Hello ${userName}`); // eslint-disable-line no-console
   return userName;
 };
 
