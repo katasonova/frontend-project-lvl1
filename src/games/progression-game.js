@@ -10,7 +10,7 @@ import {
   // eslint-disable-next-line import/extensions
 } from '../index.js';
 
-const MIN_PROGRESSION_LENGTH = 5;
+const MIN_PROGRESSION_LENGTH = 6;
 const MAX_PROGRESSION_LENGTH = 10;
 const MIN_PROGRESSION_STEP = 1;
 const MAX_PROGRESSION_STEP = 50;
@@ -33,7 +33,7 @@ const generateProgression = () => {
 
   const generateHiddenNumberPosition = getRandomNumber(0, result.length - 1);
   const hiddenNumber = result[generateHiddenNumberPosition];
-  result[generateHiddenNumberPosition] = ' .. ';
+  result[generateHiddenNumberPosition] = '..';
 
   console.log(`Question: ${result.join(' ')}`); // eslint-disable-line no-console
   return hiddenNumber;
